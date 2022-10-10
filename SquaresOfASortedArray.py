@@ -18,10 +18,12 @@ class Soltion:
 
         left = 0
         right = len(nums) - 1
+        ans = []
         while left != right:
-            if nums[left] ** 2 < nums[right] ** 2:
-                pass
+            if abs(nums[left]) < abs(nums[right]):
+                ans.insert(nums[right] ** 2)
+                right -= 1
             else:
-                nums[right], nums[left] = nums[left], nums[right]
-            right -= 1
-        return [i ** 2 for i in nums]
+                ans.insert(nums[left] ** 2)
+                left += 1
+        return ans
