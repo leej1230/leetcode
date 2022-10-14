@@ -9,8 +9,8 @@ class Solution:
         for i in range(len(nums)):
             to_append = self.recursive_permute(nums[:i] + nums[i+1:])
             for arr in to_append:
-                tmp_sol.append(nums[i]+arr)
-            return tmp_sol
+                tmp_sol.append([nums[i]]+arr)
+        return tmp_sol
 
     def permute(self, nums: List[int]) -> List[int]:
         ans = self.recursive_permute(nums)
