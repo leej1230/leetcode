@@ -1,3 +1,8 @@
 - git add *
 - git commit -m "commit message here"
 - git push
+
+
+- Git log --graph: Shows the history of the repository
+- Git merge branch-name: Merge branch to current branch
+- Git checkout branch-name: Switch a branch to branch-name
