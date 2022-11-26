@@ -1,8 +1,15 @@
+GIT
 - git add *
 - git commit -m "commit message here"
 - git push
 
+- git log --graph: Shows the history of the repository
+- git merge branch-name: Merge branch to current branch
+- git checkout branch-name: Switch a branch to branch-name
 
-- Git log --graph: Shows the history of the repository
-- Git merge branch-name: Merge branch to current branch
-- Git checkout branch-name: Switch a branch to branch-name
+Dynamic Programming
+- Think about this topic when you see a word "max" or "min" in a question sentence
+- Draw a tree and identify a subproblem
+    - See if anything can be memoized
+- Hash map is BFF
+
