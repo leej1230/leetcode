@@ -7,9 +7,12 @@ GIT
 - git merge branch-name: Merge branch to current branch
 - git checkout branch-name: Switch a branch to branch-name
 
-Dynamic Programming
+Dynamic Programming (1D 2D)
 - Think about this topic when you see a word "max" or "min" in a question sentence
 - Draw a tree and identify a subproblem
     - See if anything can be memoized
+- Look at the question from different point of view
+    - ex) Do we have to make check the string is same with target in every iteration?
+            Can that be done by only using index?
 - Hash map is BFF
 
