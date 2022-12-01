@@ -1,18 +1,23 @@
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
         nums = [1]+nums+[1]
+        dp = {}
 
         def dfs(left, right):
             if right - left < 0:
                 return 0
+            
+            if (left,right) in dp:
+                return dp[(left,right)]
 
             tmp_max = -1
             for i in range(left, right+1):
-                p = nums[i]*nums[i-1]+nums[i]+1
+                p = nums[i]*nums[i-1]*nums[i+1]
                 d = dfs(left, i-1) + dfs(i+1,right)
                 tmp_max=max(tmp_max, p+d)
+            dp[(left,right)] = tmp_max
             return tmp_max
-        return dfs(0, len(nums)-1)
+        return dfs(0, len(nums)-2)
         '''
         dp = {}
 
