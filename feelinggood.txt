@@ -14,5 +14,10 @@ Dynamic Programming (1D 2D)
 - Look at the question from different point of view
     - ex) Do we have to make check the string is same with target in every iteration?
             Can that be done by only using index?
-- Hash map is BFF
-
+- Hash map is BFF with memoization
+- Patterns
+    - Coin Change
+    - 2D
+    - 1D
+    - Make decision tree and dfs (use memoization)
+    - Original formula with subproblems
