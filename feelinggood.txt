@@ -21,3 +21,10 @@ Dynamic Programming (1D 2D)
     - 1D
     - Make decision tree and dfs (use memoization)
     - Original formula with subproblems
+
+Greedy Algorithm
+- Most of the time, minimum heap is involved
+- Python only has minimum but notice how we can have maximum heap if we multiply -1 to all the values
+- Somewhat similar to DP
+    - So start from writing a decision tree aka best friend
+- Find what can be rejected from consideration (Q.1899)
