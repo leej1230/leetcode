@@ -28,3 +28,9 @@ Greedy Algorithm
 - Somewhat similar to DP
     - So start from writing a decision tree aka best friend
 - Find what can be rejected from consideration (Q.1899)
+
+Sliding Window Strategy (Q. 424, 76)
+- Make window by having left and right pointer (while r < len(sth))
+- Problem should be something related to substring
+- Think when the window will be valid to the condition that needs to be satisfied to solve the Problem
+    - Ex) If the problem asks window to contain same character -> then the window is valid iff there's same characters in the window
