@@ -34,3 +34,8 @@ Sliding Window Strategy (Q. 424, 76)
 - Problem should be something related to substring
 - Think when the window will be valid to the condition that needs to be satisfied to solve the Problem
     - Ex) If the problem asks window to contain same character -> then the window is valid iff there's same characters in the window
+
+Stack
+- Monotonic Decreasing Stack
+    - Stack that has numbers in decreasing order
+    - If the lower number is added, keep popping until it reaches lower number is found
