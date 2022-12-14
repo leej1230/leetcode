@@ -39,3 +39,7 @@ Stack
 - Monotonic Decreasing Stack
     - Stack that has numbers in decreasing order
     - If the lower number is added, keep popping until it reaches lower number is found
+
+Binary Search
+- int((left+right)/2) to find middle
+- Use while loop to do the search: while left<=right
