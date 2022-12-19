@@ -47,3 +47,24 @@ Binary Search
 Linked List
 - Know how to get middle of the linked list (move middle by 1 and fast by 2)
 - You might want to utilize other data structure algorithm to complete the task (queue, stack...)
+- Floyd's Algorithm
+    - Alogrithm that identfies a cycle/loop in a linked list
+    - Distance between head of list to head of cycle = distance between overlap to head of cycle
+    - Method
+        1. Initialize fast and slow pointer with head
+        2. Move slow pointer by 1, fast pointer by 2
+        3. If they overlap (= stops at same node) then there exist a loop in a linked list
+            - And can see where the loop starts from by using another pointer from head and find duplicate
+        - Proof
+            - We know 2*slow = fast
+            - fast will loop at least once in the cycle before overlap so it will move p+2c-x
+                - where:
+                    - c: length of cycle
+                    - p: length between head of linked list to head of cycle
+                    - x: length between head of cycle to overlap node
+            - slow will not loop before overlap: p+c-x
+            - So 2(slow) = fast now becomes 2(p+c-x) = p+2c-x
+            - p-x = 0 -> p=x
+            - Therefore we know: length between head of linked list to head of cycle = 
+                length between head of cycle to overlap node
+- 
