@@ -4,8 +4,8 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 ## Bad Questions
 1. Matrix Block Sum (1314) -> Need to get through tedious conditions, do Maximal Square(221) instead
 
-##TIPS
-###GIT
+## TIPS
+### GIT
 - git add *
 - git commit -m "commit message here"
 - git push
@@ -14,7 +14,7 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - git merge branch-name: Merge branch to current branch
 - git checkout branch-name: Switch a branch to branch-name
 
-###Dynamic Programming (1D 2D)
+### Dynamic Programming (1D 2D)
 - Think about this topic when you see a word "max" or "min" in a question sentence
 - Draw a tree and identify a subproblem
     - See if anything can be memoized
@@ -29,29 +29,29 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
     - Make decision tree and dfs (use memoization)
     - Original formula with subproblems
 
-###Greedy Algorithm
+### Greedy Algorithm
 - Most of the time, minimum heap is involved
 - Python only has minimum but notice how we can have maximum heap if we multiply -1 to all the values
 - Somewhat similar to DP
     - So start from writing a decision tree aka best friend
 - Find what can be rejected from consideration (Q.1899)
 
-###Sliding Window Strategy (Q. 424, 76)
+### Sliding Window Strategy (Q. 424, 76)
 - Make window by having left and right pointer (while r < len(sth))
 - Problem should be something related to substring
 - Think when the window will be valid to the condition that needs to be satisfied to solve the Problem
     - Ex) If the problem asks window to contain same character -> then the window is valid iff there's same characters in the window
 
-###Stack
+### Stack
 - Monotonic Decreasing Stack
     - Stack that has numbers in decreasing order
     - If the lower number is added, keep popping until it reaches lower number is found
 
-###Binary Search
+### Binary Search
 - (left+right)//2 to find middle
 - Use while loop to do the search: while left<=right
 
-###Linked List
+### Linked List
 - Know how to get middle of the linked list (move middle by 1 and fast by 2)
 - You might want to utilize other data structure algorithm to complete the task (queue, stack...)
 - Floyd's Algorithm
