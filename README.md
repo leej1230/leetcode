@@ -74,3 +74,12 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
             - p-x = 0 -> p=x
             - Therefore we know: length between head of linked list to head of cycle = 
                 length between head of cycle to overlap node
+
+### Trees
+- If you are familiar with recursive algorithms/coding it won't be too complex to track what's happening
+    - I would suggest to practice recursive or dp questions first
+- Think about in what order the problems should be solved
+    - In left node -> root node -> right node?
+    - Deepest left node -> deepest right node -> root node?
+- In other word, should the problem solved in bottom-top or top-bottom method that's the first thing to consider
+- Usually, to visit all the node, you will have to make a recursive call to call until the node reaches None
