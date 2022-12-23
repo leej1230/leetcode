@@ -87,3 +87,17 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
     - Deepest left node -> deepest right node -> root node?
 - In other word, should the problem solved in bottom-top or top-bottom method that's the first thing to consider
 - Usually, to visit all the node, you will have to make a recursive call to call until the node reaches None
+- Traversal Algorithm
+    - Inorder Traversal
+        1. Call inorder with left node
+        2. visit the root
+        3. Call inorder with right node
+    - Preorder Traversal
+        2. visit the root
+        1. Call preorder with left node
+        3. Call preorder with right node
+    - Postorder Traversal
+        1. Call postorder with left node
+        3. Call postorder with right node
+        2. visit the root
+
