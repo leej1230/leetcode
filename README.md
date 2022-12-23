@@ -2,7 +2,11 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 > Rome was not built in a day.
 
 ## Bad Questions
-1. Matrix Block Sum (1314) -> Need to get through tedious conditions, do Maximal Square(221) instead
+1. Matrix Block Sum (1314)
+    - Need to get through tedious conditions, do Maximal Square(221) instead
+2. Serialize and Deserialize Binary Tree (297)
+    - It is not hard if you know basic algorithms of tree. It is hard because you need decent skill with string manipulation.
+      Do other questions instead to focus on learn about trees.
 
 ## TIPS
 ### GIT
