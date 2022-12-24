@@ -93,11 +93,19 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
         2. visit the root
         3. Call inorder with right node
     - Preorder Traversal
-        2. visit the root
-        1. Call preorder with left node
+        1. visit the root
+        2. Call preorder with left node
         3. Call preorder with right node
     - Postorder Traversal
         1. Call postorder with left node
-        3. Call postorder with right node
-        2. visit the root
+        2. Call postorder with right node
+        3. visit the root
 
+### Trie / Prefix Tree
+- Tree that each node contains a string
+- Mainly used for questions that ask to search if the word exist in the data base
+- Each node has:
+    - Value (string most of the time)
+    - next node: Dictionary, use string as key, node as value
+    - isEnd: Tells if the Value stored in the node was stored as a word or just a middle of the word
+- Solving question Implement Trie (208) is more than enough to understand the concept
