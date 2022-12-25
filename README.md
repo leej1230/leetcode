@@ -109,3 +109,13 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
     - next node: Dictionary, use string as key, node as value
     - isEnd: Tells if the Value stored in the node was stored as a word or just a middle of the word
 - Solving question Implement Trie (208) is more than enough to understand the concept
+
+### Heap
+- Python only has minimum heap
+    - heapq.heapify(list_name)
+    - heapq.heappush(list_name, value)
+    - heapq.heappop(list_name)
+    - value can be tuple and will be sorted based on first element
+- By making value to negative, it is also possible to make a maximum heap
+- No special tips for this, when you start solving, think what needs to be priortize or sorted.
+
