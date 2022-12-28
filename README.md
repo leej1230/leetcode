@@ -7,6 +7,8 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 2. Serialize and Deserialize Binary Tree (297)
     - It is not hard if you know basic algorithms of tree. It is hard because you need decent skill with string manipulation.
       Do other questions instead to focus on learn about trees.
+3. Design Twitter (355)
+    - Don't get me wrong, I like what the question asks. However, it seems like there is slight bug in a leetcode system, that I just could not figure it out even though my idea was all same with the code that works. Solve it, and go over if your idea is correct, don't face with the TypeError thing.
 
 ## TIPS
 ### GIT
