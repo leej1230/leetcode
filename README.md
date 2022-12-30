@@ -121,3 +121,12 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - By making value to negative, it is also possible to make a maximum heap
 - No special tips for this, when you start solving, think what needs to be priortize or sorted.
 
+### Backtracking
+- Somewhat similar to dp
+- This algorithm helps you to identify all possible subset of the array
+    - You can partition the array/string in all possible way
+- Template
+    - For loop that decides the posistion of partition
+    - Add partition to array
+    - Call the function recursively
+    - Remove the partition from array
