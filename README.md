@@ -130,3 +130,33 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
     - Add partition to array
     - Call the function recursively
     - Remove the partition from array
+
+### Graph
+- DFS & BFS
+    - The way you write the code is almost similar, difference happens how you pop the queue or call a recursive function
+    - Things to prepare
+        - set() for keeping visited node (cannot visit same node twice)
+        - collection.deque() for saving place that you will visit in future
+            - Instead of making queue, you can call the function recusively passing next index or node
+        - ((1,0),(-1,0),(0,1),(0,-1)) if grid you need it for visit adjacent space. Yes you have to write this everytime, I know it's time consuming
+    - DFS
+        - Pop the end from queue, add to visited set
+        - From the popped position get next positions 
+        - For each positions, make sure if they fit into what you are looking for
+        - If they do, add the posisiton in the end of queue or call recursive function with that position
+    - BFS
+        - Pop the newest element from queue, add to visited set
+        - From the popped position get next positions 
+        - For each positions, make sure if they fit into what you are looking for
+        - If they do, add the posisiton in the end of queue
+- Topological Sort
+    - Graph must be directed AND no cycle (acyclic graph)
+    - Sort the nodes in the order of what should be needs to be processed before reaching a certain node
+        - i.e.) if there is graph (handle -> door) topological sort will sort in [handle, door] which tells you handle should be done before going making door
+    - Method
+        1. For initialization, get all nodes that doesn't have incoming edge and add to queue (if a->b then add a)
+        2. Pop left from queue and append to answer list
+        3. For each adjacent node of current node pointing at, decrement incoming edge count
+        4. If zero, add that node into queue
+        5. Repeat the process from #2 until queue becomes empty
+        6. In the end if the answer list does NOT have all node it means there is cycle in the graph else the answer list should be sorted in proper order.

@@ -1,38 +1,37 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        # Dict for directional Graph
-        #   {Course: [Courses that points to "Course"]}
-        DG = {x:[] for x in range(numCourses)}
+        graph = defaultdict(list)
+        incomingEdge = {}
+        for x in range(numCourses):
+            incomingEdge[x] = 0
+        for courses in prerequisites:
+            graph[courses[1]].append(courses[0])
+            incomingEdge[courses[0]] += 1
+
+        queue = collections.deque()
+        for c,n in incomingEdge.items():
+            if n==0:
+                queue.append(c)
+
+        answer = []
+        while queue:
+            curCourse = queue.popleft()
+            answer.append(curCourse)
+            for course in graph[curCourse]:
+                incomingEdge[course] -= 1
+                if incomingEdge[course] == 0:
+                    queue.append(course)
         
-
-        # For loop through the prerequisites
-        #   i and j -> DG[i] = [j] or append(j)
-        for prerequisite in prerequisites:
-            DG[prerequisite[0]].append(prerequisite[1])
-
-        ans = []
-        # While DG
-        while DG:
-        #   set empty_node = None
-            empty_node = None
-        #   For loop DG and find the node that is empty
-            for key, val in DG.items():
-                if val == []:
-                    empty_node = key
-                    break
-        #   If empty_node was left as None -> No class can be taken return []
-            if not empty_node:
-                return []
-        #   Delete empty_node from DG and append to solution
-            DG.pop(empty_node)
-            ans.append(empty_node)
-        #   For loop through DG
-            for key,val in DG.items():
-                if empty_node in val:
-                    val.remove(empty_node)
-        #       If there is empty_node in value of key, delete that one
-
-        if len(ans) <= numCourses:
-            return ans
-        
-        return []
+        return answer if len(answer)==numCourses else []
+        '''
+        General Idea
+        Topological sort
+            Make the graph of prereq -> course
+            keep track of incoming edge for each node as well
+            Topological sort method
+            1. Get all nodes that has no incoming edge, add to queue
+            2. pop from queue append to answer list, let adjacent edges have -1 incoming edge
+               count, if becomes zero add to the queue
+            3. Repeat #2 until queue becomes empty
+            In the end answer list should have equal to numCourses or return empty array
+        '''
