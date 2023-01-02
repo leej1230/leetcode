@@ -82,6 +82,14 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
                 length between head of cycle to overlap node
 
 ### Trees
+- Definition of Tree
+    - Graph G is a Tree IF AND ONLY IF:
+        1. G is fully connected: from one node, you should be able to go to any nodes that exist in the tree
+        2. G contains no cycle: there should be only ONE path to go to one node to other node
+- Number of Edge
+    - If the there are n nodes in the graph, then number of edge MUST be (n-1)
+        - If less, then there will be node(s) that aren't connected
+        - If more, there must be a cycle
 - If you are familiar with recursive algorithms/coding it won't be too complex to track what's happening
     - I would suggest to practice recursive or dp questions first
 - Think about in what order the problems should be solved
@@ -160,3 +168,18 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
         4. If zero, add that node into queue
         5. Repeat the process from #2 until queue becomes empty
         6. In the end if the answer list does NOT have all node it means there is cycle in the graph else the answer list should be sorted in proper order.
+- Union Find
+    - Algorithm that allows you to identify where the nodes are grouped at
+        - In other words, it could show you how many trees are there based on edges
+    - Algorithm:
+        1. Prepare parents array, each index is representing the node and initially the parent of node should be itself, so value should equal to the index
+        2. Prepare rank array, tells you how many children does the node have including itself. Therefore nodes all should have 1 in the beginning
+        3. Find number of nodes: to calculate how many trees are there
+        4. For each edges (edge given in form of [nodeA, nodeB])
+            - Find the parent of nodeA and nodeB by using parents array
+            - if nodeA and nodeB has same parent, that means they are already in a same tree, so ignore it and move onto next edge
+            - Compare the rank between parent of nodeA and nodeB
+            - Parent with BIGGER number of rank will be parent of merged tree so update the parents array's index smaller parent value with parent of bigger tree
+            - Update the rank as well
+            - Subtract one from Total number of nodes
+        5. Number of nodes should now be a number of trees in the graph at this point
