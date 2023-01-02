@@ -20,28 +20,6 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - git merge branch-name: Merge branch to current branch
 - git checkout branch-name: Switch a branch to branch-name
 
-### Dynamic Programming (1D 2D)
-- Think about this topic when you see a word "max" or "min" in a question sentence
-- Draw a tree and identify a subproblem
-    - See if anything can be memoized
-- Look at the question from different point of view
-    - ex) Do we have to make check the string is same with target in every iteration?
-            Can that be done by only using index?
-- Hash map is BFF with memoization
-- Patterns
-    - Coin Change
-    - 2D
-    - 1D
-    - Make decision tree and dfs (use memoization)
-    - Original formula with subproblems
-
-### Greedy Algorithm
-- Most of the time, minimum heap is involved
-- Python only has minimum but notice how we can have maximum heap if we multiply -1 to all the values
-- Somewhat similar to DP
-    - So start from writing a decision tree aka best friend
-- Find what can be rejected from consideration (Q.1899)
-
 ### Sliding Window Strategy (Q. 424, 76)
 - Make window by having left and right pointer (while r < len(sth))
 - Problem should be something related to substring
@@ -183,3 +161,25 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
             - Update the rank as well
             - Subtract one from Total number of nodes
         5. Number of nodes should now be a number of trees in the graph at this point
+
+### Dynamic Programming (1D 2D)
+- Think about this topic when you see a word "max" or "min" in a question sentence
+- Draw a tree and identify a subproblem
+    - See if anything can be memoized
+- Look at the question from different point of view
+    - ex) Do we have to make check the string is same with target in every iteration?
+            Can that be done by only using index?
+- Hash map is BFF with memoization
+- Patterns
+    - Coin Change
+    - 2D
+    - 1D
+    - Make decision tree and dfs (use memoization)
+    - Original formula with subproblems
+
+### Greedy Algorithm
+- Most of the time, minimum heap is involved
+- Python only has minimum but notice how we can have maximum heap if we multiply -1 to all the values
+- Somewhat similar to DP
+    - So start from writing a decision tree aka best friend
+- Find what can be rejected from consideration (Q.1899)
