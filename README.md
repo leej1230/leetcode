@@ -161,6 +161,47 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
             - Update the rank as well
             - Subtract one from Total number of nodes
         5. Number of nodes should now be a number of trees in the graph at this point
+- Dijkstra Algorithm
+    - Algorithm to find a shortest path from one node to other node in a WEIGHTED DIRECTED graph
+    - Bried Idea: Starting from node s, go to the adjacent nodes. Weight on the edge represent the time taking to reach that next node.
+      If you reached to certain node and cost is lower than previous cost taken, update the cost, and keep where you are from (previous node)
+      When every thing is done, you can trace the shortest path you have walked through by tracking previous nodes from end node.
+    - Variables you will need:
+        - Path Weight Array: Initialized with infinity, starting node should be 0. Represents the cost you need to pay to reach there from starting node s. During the algorithm, update with minimum value.
+        - Previous Node Array (unnecessary if you don't need to know route): Keeps previous node, when you update the value in path weight array.
+        - Remaining Array: Can be array, heap (doesn't matter but min heap will make thing slightly faster) Keep (cost to reach the node A,node A), will be used during the algorithm
+    - Algorithm:
+        1. Initialize variables (Make and add starting node)
+        2. While remaining array is NOT empty
+            1. Pop tuple from remaining array
+            2. Iterate through all adjacent nodes of the current node. Calculate the cost and update cost and prev node if new cost is smaller and add that to remaining array as well.
+        3. After the while loop, all the values inside Path Weight array should show you minimum cost it will take to reach that node from starting node s. Trace Previous Node array from end node to identify the path.
+- Minimum Spanning Tree
+    - Spanning tree: Tree that all nodes are connected in MINIMUM number of edges(=N-1 where N==Number of nodes)
+    - Minimum Spanning tree: Spanning tree that the total of edge costs is minimum within all possible spanning trees that you can make from the same graph
+    - Algorithm to create spanning tree:
+        - Prim's Algorithm: Imagine you connected all nodes, look in order of minimum costs and add edges so that it will be a spanning tree in the end
+            1. Make visited set, edge set to store edges. Add ALL possible weights and adjacent nodes to queue/heap and add starting node (can be any node) with cost 0.
+            2. While visited set is less than number of nodes in original graph
+                1. Pop the value from the set, and check if the node is not in visited yet
+                2. If not in visited, add to visit and look at the adjacent nodes. Add weight of the edge between those two nodes and adjacent node to the queue/heap. Keep edge to edge set
+            3. At this point minimum spanning tree can be detected
+            - Algorithm will be O(V^2) or O((V+E)logV)=O(ElogV) if you use heap
+        - Kruskal's Algorithm: Basic idea is same as Prim's algorithm, but you will be focusing on how many trees are there during the loop
+            1. Get ALL possible weights and adjacent nodes and sort in non-decreasing order of weights. Keep number of nodes which is the initial number of trees.
+            2. While there are trees more than 1 (OR you can keep track how many number of edges has been saved while # of edges less than V-1)
+                1. Pop the value from array and identify the parents of two nodes
+                    - Union Set Algorithm used in here
+                2. If they are different parents, save the edge, decrement the number of trees by 1
+            3. At this point minimum spanning tree will be formed
+            - Sorting edge array is O(ElogE)
+            - The loop will be at most O(E)
+            - Union find is O(logV) everytime
+            - Therefore the time complexity of whole algorithm will be O(ElogE)
+            - OR O(ElogV)
+                - E is V^2 at most
+                    - log(V^2) = 2log(V) = O(logV) = O(logE)
+
 
 ### Dynamic Programming (1D 2D)
 - Think about this topic when you see a word "max" or "min" in a question sentence
