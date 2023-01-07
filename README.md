@@ -224,3 +224,9 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - Somewhat similar to DP
     - So start from writing a decision tree aka best friend
 - Find what can be rejected from consideration (Q.1899)
+
+### Intervals
+- Maybe this could be one of the hardest topic in the list because the difficulty will depend on solver's puzzle solving problem
+- Still, there are couple tips or strategy you can do when you solve the problem
+- Make the easy example intervals and draw it using dots and lines, it may help you understand what problem want to program to do
+- Most of the time, you can start with sorting the given intervals, it can be sorted based on starting value or end value. You might want to consider couple minutes which way you want intervals to be sorted and come up with reason.
