@@ -9,6 +9,8 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
       Do other questions instead to focus on learn about trees.
 3. Design Twitter (355)
     - Don't get me wrong, I like what the question asks. However, it seems like there is slight bug in a leetcode system, that I just could not figure it out even though my idea was all same with the code that works. Solve it, and go over if your idea is correct, don't face with the TypeError thing.
+4. Multiply Strings (43)
+    - It's a question that checks if you can "program". Need to get through analyzing and organizing logics occuring when you multiply numbers. I don't think this is a good question just because answer cannot be neat and the solution is too straightforward. It is a good practice for practicing programming or language but not suitable for learning DSA.
 
 ## TIPS
 ### GIT
