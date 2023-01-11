@@ -232,3 +232,8 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - Still, there are couple tips or strategy you can do when you solve the problem
 - Make the easy example intervals and draw it using dots and lines, it may help you understand what problem want to program to do
 - Most of the time, you can start with sorting the given intervals, it can be sorted based on starting value or end value. You might want to consider couple minutes which way you want intervals to be sorted and come up with reason.
+
+### Math & Geometry
+- Honestly, this is a type of chapter that "if you get, you were just unlucky on that day".
+- Try to be logical as possible, point out and analyze any pattern you have found and ask for hint based on it.
+- Try to solve the question before thinking about time complexity for it. That brute force method in your head could be the solution.
