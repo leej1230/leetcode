@@ -237,3 +237,11 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 - Honestly, this is a type of chapter that "if you get, you were just unlucky on that day".
 - Try to be logical as possible, point out and analyze any pattern you have found and ask for hint based on it.
 - Try to solve the question before thinking about time complexity for it. That brute force method in your head could be the solution.
+- PREFIX SUM
+  - Tips to find the sum of subarray instantly
+  - Method: Using given array make the array that summing 0 to i
+    - i.e) [1,2,3] -> [1,1+2,1+2+3]
+  - To get sum of subarray for range i to j (inclusive), calcuate prefix[j] - prefix[i-1]
+
+### Python Tips
+- math.gcd(a,b): Calculates gcd of a and b for you
