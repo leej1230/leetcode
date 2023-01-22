@@ -245,3 +245,5 @@ Me simply keep solving leetcode questions to acquire a ___mega brain___ in a nea
 
 ### Python Tips
 - math.gcd(a,b): Calculates gcd of a and b for you
+- arr[:] to copy the array, mainly used in recursion process and you want to save array for answer, such as backtrack
+- 
